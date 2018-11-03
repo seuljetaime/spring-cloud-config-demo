@@ -13,6 +13,7 @@ repositories {
 
 dependencies {
     compile group: 'org.springframework.cloud', name: 'spring-cloud-config-client', version: '2.0.2.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.0.6.RELEASE'
     
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
