@@ -1,0 +1,24 @@
+package client2;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@SpringBootApplication
+@RestController("/")
+public class ConfigClient2Application {
+
+    @Value("${info.foo}")
+    private String property;
+
+    public static void main(String[] args) {
+        SpringApplication.run(ConfigClient2Application.class, args);
+    }
+
+    @GetMapping("/test")
+    public String test() {
+        return "This is a test, the property is: " + property;
+    }
+}

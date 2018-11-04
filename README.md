@@ -15,8 +15,10 @@ $ cd $HOME
 $ mkdir config-repo
 $ cd config-repo
 $ git init .
-$ echo server.port: 8080 > application.properties
-$ echo info.foo: bar >> application.properties
+$ echo server.port: 8080 > client.properties
+$ echo info.foo: bar >> client.properties
+$ echo server.port: 8081 > client2-dev.properties
+$ echo info.foo: 8081 >> client2-dev.properties
 $ git add -A .
 $ git commit -m "Add application.properties"
 ```
@@ -37,4 +39,8 @@ http://localhost:8888/testing/application.yml
 
 # Config Client
 
-启动并访问 http://localhost:8080/test
+启动并访问
+
+http://localhost:8080/test
+
+http://localhost:8081/test
